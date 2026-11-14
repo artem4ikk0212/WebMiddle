@@ -1,0 +1,161 @@
+
+:root {
+    --bg-start: #f4f7ff;
+    --bg-end: #dce6ff;
+    --panel: #ffffff;
+    --primary: #2f5dff;
+    --primary-dark: #1d3fb8;
+    --text: #1d2736;
+    --muted: #5d6b82;
+    --border: rgba(26, 39, 61, 0.1);
+    --shadow: 0 12px 30px rgba(31, 49, 94, 0.12);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    padding: 40px 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.7;
+    color: var(--text);
+    background: linear-gradient(
+        135deg,
+        var(--bg-start),
+        var(--bg-end)
+    );
+    text-align: center;
+}
+
+/* Загальна ширина елементів */
+body > * {
+    max-width: 850px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Головний заголовок */
+h1 {
+    margin: 0 0 25px;
+    color: var(--primary-dark);
+    font-size: clamp(2.4rem, 5vw, 4rem);
+    letter-spacing: -2px;
+    text-align: center;
+}
+
+/* Зображення */
+img {
+    display: block;
+    width: min(100%, 350px);
+    height: auto;
+    margin: 0 auto 30px;
+    padding: 12px;
+    background: white;
+    border: 2px solid rgba(47, 93, 255, 0.2);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.04);
+}
+
+/* Другий заголовок */
+h2 {
+    margin: 30px 0 15px;
+    color: var(--primary-dark);
+    font-size: clamp(1.8rem, 3vw, 2.5rem);
+    text-align: center;
+}
+
+/* Третій заголовок */
+h3 {
+    margin: 30px 0 15px;
+    color: var(--text);
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+/* Абзац */
+p {
+    margin: 0 auto 20px;
+    color: var(--muted);
+    font-size: 1.08rem;
+    text-align: center;
+}
+
+/* Нумерований список */
+ol {
+    margin: 0 auto;
+    padding: 25px 30px;
+    background: var(--panel);
+    border: 1px solid var(--border);
+    border-radius: 18px;
+    box-shadow: var(--shadow);
+    list-style-position: inside;
+    text-align: center;
+}
+
+/* Елементи списку */
+li {
+    margin-bottom: 15px;
+    color: var(--text);
+    font-size: 1rem;
+    text-align: center;
+}
+
+li:last-child {
+    margin-bottom: 0;
+}
+
+li::marker {
+    color: var(--primary);
+    font-weight: bold;
+}
+
+/* Команди Git */
+code {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 6px;
+    background: rgba(47, 93, 255, 0.12);
+    color: var(--primary-dark);
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+/* Адаптація для телефонів */
+@media (max-width: 600px) {
+    body {
+        padding: 25px 15px;
+    }
+
+    h1 {
+        font-size: 2.3rem;
+    }
+
+    h2 {
+        font-size: 1.8rem;
+    }
+
+    h3 {
+        font-size: 1.3rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    ol {
+        padding: 20px 12px;
+    }
+
+    li {
+        font-size: 0.95rem;
+    }
+}
